@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header > .tablinks > a{
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+header > .tablinks > a:hover{
+    border-bottom: 1px solid black;
+}
+.menu{
+    margin: 0 20px;
+    width: 20px;
+    height: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu > div{
+     width: 4px;
+     height: 4px;
+     background-color: rgb(110, 110, 110);
+     margin: 1px;
+}
+header > button{
+    border-radius: 3px;
+    background-color: rgba(8, 100, 240, .7);
+    outline: none;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    margin-right: 25px;
+    font-weight: bold;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 7;
+}
+section > .image > img{
+    margin-top: 20px;
+}
+.searchbar{
+    background-color: white;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 45px;
+    border-radius: 30px;
+    border: 1px solid rgb(225, 225, 225);
+}
+input{
+    width: 85%;
+    height: 40px;
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    outline: none;
+    border: none;
+}
+.searchbar > i{
+     justify-content: center;
+     align-items: center;
+     font-size: 16px;
+     color: rgb(173, 173, 173);
+     flex-basis: 30px;
+}
+.searchbar > img{
+    width: 15px;
+    margin-left: 10px;
+}
+.buttons{
+    margin-top: 10px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttons > button{
+    cursor: pointer;
+    background-color: rgb(250, 250, 250);
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+.buttons > button:hover{
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 1px #ccc,
+    -0px -0px -1px #ccc;
+}
+.language{
+    display: flex;
+    align-items: center;
+}
+.language > .para > p{
+    color: black;
+    font-size: 13px;
+}
+.lang{
+    margin-left: 10px;
+}
+.lang > a{
+    margin-right: 5px;
+    text-decoration: none;
+    color: blue;
+    font-size: 13px;
+}
+.lang > a:hover{
+    box-shadow: 0 1px blue;
+}
+footer{
+    flex: 1.3;
+    background-color: #f2f2f2;
+    border-top: 1px solid silver;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.footer1{
+    padding-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    color: rgb(112, 112, 112);
+}
+.footer1 > p{
+    text-decoration: none;
+}
+.footer2{
+    border-top: 1px solid silver;
+    padding: 10px 0 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer2 > .left{
+    display: flex;
+}
+.footer2 > .left > a{
+    color: rgb(112, 112, 112);
+    text-decoration: none;
+    margin-right: 20px;
+    border: 1px solid transparent;
+}
+.footer2 > .left > a:hover{
+    border-bottom: 1px solid rgb(146, 146, 146);
+}
+.footer2 > .right{
+    display: flex;
+}
+.footer2 > .right > a{
+    color: rgb(112, 112, 112);
+    text-decoration: none;
+    margin-right: 20px;
+    border: 1px solid transparent;
+}
+.footer2 > .right > a:hover{
+    border-bottom: 1px solid rgb(146, 146, 146);
+}
+
+/*responsive*/
+@media only screen and (max-width: 800px){
+    .searchbar{
+        width: 550px;
+    }
+    .searchbar > img{
+        width: 15px;
+        margin-right: 20px;
+    }
+    .searchbar > i{
+        flex-basis: 30px;
+        margin-left: 20px;
+    }
+   footer{
+       flex: 2;
+   }
+   .footer2{
+       height: 100%;
+       border-top: 1px solid silver;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .footer2 > .left{
+       order: 2;
+   }
+}
+
+@media only screen and (max-width:600px){
+    .searchbar{
+        width: 450px;
+    }
+    .language > .para > p{
+        font-size: 13px;
+        margin-bottom: 45px;
+    }
+    .language > .lang{
+        display: flex;
+        width: 330px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .language > .lang > a{
+        margin-left: 5px;
+        line-height: 30px;
+    }
+}
